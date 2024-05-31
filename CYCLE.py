@@ -1,4 +1,42 @@
 
+
+# Пример 1: Бесконечный цикл
+i = 42
+while True:
+    print(i)
+    i -= 1
+    if i == -1:
+        break
+
+# Пример 2: Чтение числа до ввода корректного
+while True:
+    try:
+        number = int(input("Введите число: "))
+        break
+    except ValueError:
+        print("Ошибка: введенное значение не является числом.")
+
+# Пример 3: Обработка файла построчно
+with open('example.txt', 'r') as file:
+    while True:
+        line = file.readline()
+        if not line:
+            break
+        print(line.strip())
+
+# Пример 4: Запрос у пользователя до получения положительного ответа
+while True:
+    answer = input("Хотите продолжить? (y/n)")
+    if answer.lower() == 'y':
+        break
+
+# Пример 5: Генератор случайных чисел
+import random
+while True:
+    print(random.randint(1, 10))
+
+
+
 # Цикл for
 numbers = [1, 2, 3, 4, 5]
 for number in numbers:
@@ -56,42 +94,6 @@ for i in count(1):
     if i > 5:
         break
     print(i)
-
-# Пример 1: Бесконечный цикл
-i = 42
-while True:
-    print(i)
-    i -= 1
-    if i == -1:
-        break
-
-# Пример 2: Чтение числа до ввода корректного
-while True:
-    try:
-        number = int(input("Введите число: "))
-        break
-    except ValueError:
-        print("Ошибка: введенное значение не является числом.")
-
-# Пример 3: Обработка файла построчно
-with open('example.txt', 'r') as file:
-    while True:
-        line = file.readline()
-        if not line:
-            break
-        print(line.strip())
-
-# Пример 4: Запрос у пользователя до получения положительного ответа
-while True:
-    answer = input("Хотите продолжить? (y/n)")
-    if answer.lower() == 'y':
-        break
-
-# Пример 5: Генератор случайных чисел
-import random
-while True:
-    print(random.randint(1, 10))
-
 
 
 
